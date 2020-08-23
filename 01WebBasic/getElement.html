@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+    function changeStyle(){
+        var para =document.getElementById("p1")
+        //var para=document.getElementsByClassName("myp1")
+        //var para = document.getElementsByTagName("p")
+        // para[0].style.fontStyle ="italic";
+         para.style.color ="red";
+        for (let i = 0 ;i< para .length; i++ ) 
+              para[i].style.color ="red";       
+    }
+    </script>
+</head>
+<body>
+    <p class="myp1">This is para 1</p>
+    <p id="p1">This is para 2</p>
+    <p>This is para 3</p>
+    <button onclick="changeStyle()">click me</button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript" >
+    function validate(){
+    var user =document.getElementById("user")
+    var password =document.getElementById("password")
+
+    if (user.value.trim()=="" ) {
+        user.style.border="solid 3px red"
+        
+        document.getElementById("lbl").style.visibility="visible";
+        return false
+    } 
+    else if (password.value.trim()==""){
+        password.style.border="solid 3px red"
+    }
+    else if (password.value.trim().lenght<5) {
+        password.style.border="solid 3px red"
+        document.getElementById("lbl2").style.visibility="visible";
+        return false
+    }
+    else {
+        return true
+    }
+}
+    </script>
+</head>
+<body>
+   <form  onsubmit="return validate();" action ="MouseEvent.html">
+<input type="text" id="user" placeholder="Username">
+<label id="lbl" style="color: red;visibility: hidden;">Invalid</label><br>
+<br><input type="password" id="password" placeholder="Password">
+<label id="lbl2" style="color: red;visibility: hidden;">Password too short</label><br>
+<br>
+<input type="number" id="mobileNo" placeholder="Mobile No."><br>
+<input type="email" id="email" placeholder="Email"><br>
+
+<button type="submit">Submit</button>
+
+   </form> 
+</body>
+</html>

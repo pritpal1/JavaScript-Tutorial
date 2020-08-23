@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <script type="text/javascript">
+     function validate(){
+    var user =document.getElementById("user").value;
+    var mobile =document.getElementById("mobileNo").value;
+    var email =document.getElementById("email1").value;
+    //var regx = /[0-3]a[4-5]b/i;
+    var regx = /[^0-9]a-z A-Z/i;
+    //var regx = /[^a-z]00/i; //^use for not require character at first position
+    //var regx =/^[6-9]\d{9}$/;//Mobile:-\d is for digits {9} specify 9 range of digit $ is end
+    //var regx =/^([a-z A-Z 0-9 \.-]+)@([a-z A-Z 0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+    //email:-\ is used to use . & - ?is used for optional
+    if (regx.test(user)) {
+        alert("valid")
+    } else{
+        alert("Invalid")
+        document.getElementById("lbl").style.visibility="visible";}
+     }
+     </script>
+</head>
+<body>
+    <form>
+    <input type="text" id="user" placeholder="Username">
+    <label id="lbl" style="color: red;visibility: hidden;">Invalid</label><br>
+    <br><input type="password" id="password" placeholder="Password">
+    <label id="lbl2" style="color: red;visibility: hidden;">Password too short</label><br>
+    <br>
+    <input type="number" id="mobileNo" placeholder="Mobile No."><br><br>
+    <input type="email" id="email1" placeholder="Email"><br><br>
+    <button onclick="validate()">Submit</button>
+</form>
+</body>
+</html>

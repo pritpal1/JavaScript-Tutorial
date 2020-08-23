@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+    function fn1(){
+var inpt =document.getElementById("input1").value
+alert("Value of text box is:"+inpt);
+    }
+    function fn2(){
+var select =document.getElementById("selectbox")
+alert(select.options[select.selectedIndex].value)
+    }
+    function fn3(){
+var rd1=document.getElementById("rd1");
+var rd2=document.getElementById("rd2");
+    if (rd1.checked==true)
+      alert("Gender is"+rd1.value);
+    else if (rd2.checked==true)
+      alert("Gender is"+rd2.value);
+    else
+         alert("Plz Select Some Value")
+    }
+
+</script>
+</head>
+<body>
+    <input id="input1" placeholder="enter anything">
+    <button onclick="fn1()">Click me</button>   
+ <br><select id="selectbox">
+    <option value="BCA">BCA</option>   
+    <option value="MCA">MCA</option>   
+    <option value="PGDCA">PGDCA</option>   
+ </select>
+ <button onclick="fn2()">Click me</button>  <br>
+ <input id="rd1" type="radio" name="grp1" value="Male">Male
+</input><br>
+<input id="rd2" type="radio" name="grp1" value="Female">Female
+</input>
+   <button onclick="fn3()">Click me</button>
+</body>
+</html>
